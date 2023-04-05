@@ -1,0 +1,382 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS PARA EL NAVBAR (BARRA DE NAVEGACIÓN) */
+
+/* Cambio de fuente y color de fondo */
+body {
+  font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+  background-color: rgb (230, 230, 230);
+}
+
+html {
+  line-height: 1.0;
+  background-color: white;
+}
+
+/* Estilos para el elemento de navegación */
+nav {
+  position: relative;           /* Establece la posición relativa */
+  background-color: black;    /* Establece el color de fondo */
+  padding: 30px 20px;           /* Establece el relleno libre a ambos lados de la navegación */
+}
+
+/* Estilos para el contenedor de navegación */
+.nav-container {
+  display: flex;                   /* Establece el contenedor como flexible */
+  justify-content: space-between;  /* Establece la distribución de los elementos en el eje principal */
+  align-items: center;             /* Establece la alineación de los elementos en el eje secundario */
+}
+
+/* MODELO DE CAJA (Box Model) */
+/* Estilos para la lista desordenada */
+ul {
+  list-style-type: none;  /* Elimina el estilo de viñetas de la lista */
+  margin: 0;              /* Elimina el margen exterior de la lista */
+  padding: 0;             /* Elimina el relleno de la lista */
+  display: flex;          /* Establece la lista como un contenedor flexible */
+}
+
+/* Estilos para los elementos de la lista */
+li {
+  margin-right: 30px;  /* Establece el margen derecho de los elementos de la lista */
+}
+
+/* Estilos para los enlaces */
+a {
+  color: white;           /* Establece el color del texto del enlace */
+  text-decoration: none;    /* Elimina la decoración de subrayado del enlace */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+/* Estilos para el logo en la barra de navegación */
+#logo-navbar {
+  max-width: 100px;  /* Establece el ancho máximo del logo */
+  height: auto;     /* Ajusta automáticamente la altura del logo */
+}
+
+/* Estilos para el botón de navegación */
+.nav-button {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 35px;                 /* Margen derecho para el boton de INICIO SESION */
+  font-size: 18px;
+  background-color: rgb (230, 230, 230);   /* Establece el color de fondo del botón */
+  padding: 8px 16px;                       /* Establece el relleno del botón */
+  border: none;                            /* Elimina el borde del botón */
+  cursor: pointer;                    /* Establece el cursor del mouse como un puntero */
+  border-radius: 5px;                 /* Establece la curvatura de los bordes del botón */
+  z-index: 10;                        /* Establece la profundidad de la capa del botón */
+}
+
+.nav-promocion {
+  color: white;
+  background-color: black;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos para la lista desordenada cuando el ancho de pantalla es menor a 768px */
+@media (max-width: 768px) {
+  ul {
+      flex-direction: column;       /* Cambia la dirección de los elementos a una columna */
+      position: absolute;           /* Establece la posición absoluta */
+      top: 100%;                    /* Establece la distancia superior del elemento */
+      left: 0;                      /* Establece la distancia izquierda del elemento */
+      background-color: rgb(230, 230, 230);   /* Establece el color de fondo del menú desplegable */
+      width: 100%;                  /* Establece el ancho del menú desplegable */
+      display: none;                /* Oculta el menú desplegable */
+  }
+
+  li {
+      margin-right: 0;           /* Elimina el margen derecho de los elementos de la lista */
+      margin-bottom: 10px;       /* Agrega un margen inferior a los elementos de la lista */
+      text-align: center;        /* Centra el texto de los elementos de la lista */
+  }
+
+  .nav-button {
+      display: none;             /* Oculta el botón de navegación */
+  }
+}
+
+/* ESTILOS PARA EL HEADER */
+
+/* Estilos para el header */
+header {
+  color: black;
+  background-color: rgb(230, 230, 230); 
+  display: flex;  /* Establece el encabezado como un contenedor flexible */
+  justify-content: space-between;  /* Distribuye los elementos de forma equidistante en el eje principal */
+  align-items: center;  /* Centra los elementos verticalmente */
+  padding: 50px;  /* Añade un relleno al encabezado */
+  flex-wrap: wrap; /* Añade wrap para permitir que los elementos se ajusten al cambiar el tamaño de la ventana */
+}
+
+/* Estilos para el contenido izquierdo del encabezado */
+.left-content {
+  flex: 1;  /* Establece el ancho del elemento */
+  text-align: left;  /* Alinea el texto a la izquierda */
+}
+
+.text-content {
+font-size: 42px;
+font-weight:bold; 
+}
+
+.text-content2 {
+font-size: 18px;
+}
+
+/* Estilos para el contenido derecho del encabezado */
+.right-content {
+  flex: 1;  /* Establece el ancho del elemento */
+  text-align: right;  /* Alinea el texto a la derecha */
+  margin-left: 20px; /* Añade margen a la izquierda */
+}
+
+/* Estilos para el formulario de correo electrónico */
+.email-form {
+  display: flex;  /* Establece el formulario como un contenedor flexible */
+  margin-top: 10px;  /* Añade margen en la parte superior */
+}
+
+/* Estilos para el campo de entrada de correo electrónico */
+input[type="email"] {
+  padding: 8px;  /* Añade un relleno al campo */
+  margin-right: 10px; /* Añade margen a la derecha */
+}
+
+/* Estilos para el botón de envío */
+button[type="submit"] {
+  padding: 8px;  /* Añade un relleno al botón */
+  cursor: pointer;  /* Establece el cursor del mouse como un puntero */
+  background-color: #359cac;  /* Establece el color de fondo del botón */
+  color: white;  /* Establece el color del texto del botón */
+  border: none;  /* Elimina el borde del botón */
+  border-radius: 5px;  /* Establece la curvatura de los bordes del botón */
+}
+
+/* Estilos para las imágenes */
+img {
+  max-width: 100%;  /* Establece el ancho máximo de la imagen */
+  height: auto;  /* Ajusta automáticamente la altura de la imagen */
+}
+
+/* Media query para ajustar el contenido en pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajusta el ancho y alinea el contenido de los elementos izquierdo y derecho */
+  .left-content, .right-content {
+    flex-basis: 200%; /* Establece el ancho del elemento para que ocupe el 100% del contenedor */
+    text-align: center; /* Centra el contenido */
+  }
+
+  /* Elimina el margen izquierdo en pantallas más pequeñas */
+  .right-content {
+    margin-left: 0;
+  }
+
+  /* Ajusta la imagen para que se muestre como un bloque y se centre horizontalmente */
+  img {
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+}
+
+
+/* ESTILOS PARA LAS CARDS */
+
+section {
+  text-align: center; /* Alinea el texto del contenido al centro */
+  padding: 50px; /* Agrega un relleno de 50px alrededor del contenido de la sección */
+  background-color: rgb(230, 230, 230);
+  font-size: 32px;
+}
+
+h2 {
+  margin-bottom: 20px; /* Agrega un margen inferior de 20px al título */
+}
+
+/* Estilos para las tarjetas */
+.card-container {
+  display: flex; /* Define el contenedor de tarjetas como un flexbox */
+  justify-content: space-between; /* Alinea las tarjetas de forma que se separen entre ellas */
+  flex-wrap: wrap; /* Envuelve las tarjetas si no caben todas en una sola fila */
+  background-color: rgb(230, 230, 230);
+  margin-left: 20px;  margin-right: 20px;
+}
+
+.card {
+  background-color: white; /* Establece el color de fondo de las tarjetas */
+  width: 30%; /* Establece el ancho de cada tarjeta en un 30% */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Agrega una sombra suave a cada tarjeta */
+  text-align: left; /* Alinea el texto de la tarjeta a la izquierda */
+  margin-bottom: 20px; /* Agrega un margen inferior de 20px a cada tarjeta */
+  border-radius: 10px; /* Agrega una esquina redondeada a cada tarjeta */
+}
+
+.card-image {
+  max-width: 100%; /* Asegura que las imágenes dentro de las tarjetas no sobrepasen el ancho de la tarjeta */
+  width: 100%;
+  height: 190px;   /*Ajusta el alto para todas igual */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.author-image {
+  height: 3rem;
+  max-width: 15%;
+  width: 15%;
+  border-radius: 50%; /* Agrega un borde redondeado alrededor de la imagen del autor */
+  margin-top: 10px; /* Agrega un margen superior de 10px a la imagen del autor */
+}
+
+/* Estilos responsivos para las tarjetas */
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* Cambia el ancho de las tarjetas al 100% en pantallas más pequeñas */
+      margin-bottom: 30px; /* Aumenta el margen inferior para separar las tarjetas */
+  }
+}
+
+.info-article {
+  padding: 1.5rem;
+  flex: 1 1 0%;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+
+.info-article span {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.info-article a {
+  display: block;
+  margin-top: .5rem;
+}
+
+.title-info-article {
+  --tw-text-opacity: 1;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-top: 10px;    /* Agrega un margen superior de 20px */
+  margin-bottom: 10px; /* Agrega un margen inferior de 20px */
+}
+
+.description-info-article {
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 10px;    /* Agrega un margen superior de 20px */
+  margin-bottom: 20px; /* Agrega un margen inferior de 20px */
+}
+
+.author-name {
+  font-size: 14px; /* Establece el tamaño de fuente del nombre del autor en 14px */
+  font-weight: bold; /* Establece el peso de fuente del nombre del autor en negrita */
+}
+
+.publication-date {
+  font-size: 12px; /* Establece el tamaño de fuente de la fecha de publicación en 12px */
+  color: #777; /* Establece el color de texto de la fecha de publicación en gris */
+}
+
+/* ESTILOS PARA LA SECCION QUIENES SOMOS */
+/* Define el contenedor de contenido invertido */
+.inverted-section {
+padding: 0%;
+padding-left: 0%;
+font-size: 18px
+}
+
+.inverted-content-container {
+  background-color: black;
+  color: white;
+  display: flex; /* Muestra el contenedor como un flexbox */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos flexibles del contenedor */
+  align-items: center; /* Centra verticalmente los elementos flexibles */
+  flex-wrap: wrap-reverse; /* Envuelve los elementos flexibles en una línea inversa para que la imagen quede a la derecha */
+}
+
+.inverted-left-content, .inverted-right-content {
+  flex-basis: 48%; /* Define el ancho de los elementos como 48% */
+  padding: 0px; /* Agrega un padding de 20px a los lados */
+}
+
+.inverted-right-content {
+  text-align: left; /* Alinea el contenido del lado derecho a la izquierda */
+  margin-right: 20px;
+}
+
+.inverted-left-content img {
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Ajusta la altura automáticamente */
+}
+
+/* Estilos responsivos para colocar la imagen debajo del contenido en pantallas pequeñas */
+@media (max-width: 768px) {
+  .inverted-left-content,
+  .inverted-right-content {
+      flex-basis: 100%; /* Define el ancho de los elementos como 100% */
+      text-align: center; /* Alinea el contenido al centro */
+  }
+}
+
+/* ESTILOS PARA EL FOOTER */
+footer {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  padding: 20px; /* Agrega un relleno de 20px alrededor del contenido del footer */
+
+}
+
+.footer-container {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  display: flex; /* Crea un contenedor flexible para el footer */
+  justify-content: space-between; /* Distribuye los elementos en el contenedor con espacios iguales entre ellos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si no caben en una sola */
+}
+
+.footer-column {
+  flex-basis: calc(20% - 20px); /* Establece el ancho de cada columna como el 20% menos 20px para el margen */
+  margin-bottom: 20px;
+}
+
+.footer-column a {
+  color: black;
+  font-size: 18px;
+  display: block;
+  text-decoration:solid underline;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: inline-block; /* Hace que los iconos de redes sociales se muestren en línea */
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Estilos responsivos para el footer en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-column {
+      flex-basis: 100%; /* Cambia el ancho de las columnas al 100% en pantallas pequeñas */
+      text-align: center; /* Centra el contenido */
+  }
+}
