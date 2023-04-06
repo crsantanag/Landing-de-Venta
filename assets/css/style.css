@@ -144,6 +144,13 @@ img {
   height: auto;
 }
 
+.text-terminos {
+  font-size: 12px;
+  font-weight:bold;
+  cursor: pointer;
+  text-decoration: solid underline;
+}
+
 @media (max-width: 768px) {
   .left-content, .right-content {
     flex-basis: 100%;
